@@ -22,7 +22,7 @@ pnpm-debug.log*
 .DS_Store
 
 #config files
-src/config/*
+*/src/config/*
 
 # jetbrains setting folder
 .idea/
