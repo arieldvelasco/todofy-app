@@ -7,10 +7,12 @@ router.get('/', async (req, res) => {
     res.status(200).json({message: 'Welcome to the Todofy API'});
 });
 
-router.get('/todos/get', async (req, res) => {
+router.get('/todos/get/:id', async (req, res) => {
     try {
+        const userId = req.params.id;
+        console.log(userId);
         const todos = await todoModel.find();
-        const filteredTodos = todos.filter(todo => todo.userId === req.body.userId);
+        const filteredTodos = todos.filter(todo => todo.userId === userId);
         res.status(200).json(filteredTodos);
     } catch (error) {
         res.status(500).json({ message: 'Error fetching todos', error });
