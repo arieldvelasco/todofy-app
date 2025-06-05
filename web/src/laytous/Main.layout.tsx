@@ -2,7 +2,7 @@ import { Outlet } from "react-router"
 
 const MainLyout = () => {
     return (
-        <div>
+        <div className="h-dvh" >
             <header>
                 <h1>Todofy</h1>
             </header>

@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import Error404 from "./pages/Error404";
-import Login from "./pages/Login";
+import Auth from './pages/Auth';
 import MainLyout from "./laytous/Main.layout";
 
 const router = createBrowserRouter([
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/login",
-                element: <Login />,
+                path: "/Auth",
+                element: <Auth />,
             },
             {
                 path: "/*",
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
 
 const App = () => {
     return (
-        <div className="" >
+        <div className="flex flex-col h-dvh" >
             <RouterProvider router={router} />
         </div>
     )
